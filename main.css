@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f12711;
+  background: -webkit-linear-gradient(to right, #f5af19, #f12711);
+  background: linear-gradient(to right, #f5af19, #f12711);
+  font-family: 'Roboto', sans-serif;
+}
+.info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #2d3436;
+  height: 60px;
+  border-radius: 60px;
+  padding: 20px;
+  width: fit-content;
+}
+.info:hover > .search-text {
+  width: 240px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.search-text:focus{
+  width: 240px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.search-text:focus ~ #position-button {
+  width: 60px;
+  height: 60px;
+  background: #f12711;
+  margin-left: 10px;
+}
+.search-text:focus ~ #search-button {
+  background: white;
+}
+.search-text:focus ~ #position-button > i {
+  display: inline;
+}
+.info:hover > #search-button{
+  background: white;
+  margin-left: 10px;
+}
+.info:hover > #position-button {
+  width: 60px;
+  height: 60px;
+  background: #f12711;
+  margin-left: 10px;
+}
+.info:hover > #position-button > i {
+  display: inline;
+}
+#position-button {
+  color: white;
+  float: right;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background: #2d3436;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  font-size: 30px;
+  padding: 0px;
+}
+#search-button {
+  color: #f12711;
+  float: right;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #2d3436;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  font-size: 25px;
+}
+#search-button:hover {
+  box-shadow: 2px 0 2px 0;
+}
+.search-text{
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 20px;
+  transition: 0.4s;
+  line-height: 60px;
+  width: 0px;
+}
+#position-button > i {
+  display: none;
+}
+
+#title {
+  text-align: center;
+  margin-top: 125px;
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+  transition: 1s;
+}
+.slider {
+  transition: 2s;
+  top: 10%;
+  left: 50%;
+}
+.disappear {
+  width: 0;
+  height: 0;
+}
+.holder {
+  display: none;
+  transition: 0.5s;
+}
+.show {
+  position : absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: white;
+  padding: 20px;
+  margin-left: 50px;
+  width: 80%;
+}
+
+#cityname {
+  margin-top: 100px;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 200px;
+  margin-right: 50px;
+}
+#temperature {
+  font-size: 100px;
+  line-height: 100px;
+  margin-top: 100px;
+  font-weight: bold;
+  text-align: center;
+}
+#description {
+  font-size: 15px;
+  font-weight: lighter;
+  line-height: 100px;
+  margin-top: 50px;
+  text-align: center;
+}
+#icon {
+  margin-top: 50px;
+}
