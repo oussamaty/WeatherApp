@@ -4,14 +4,13 @@ let proxy = 'https://cors-anywhere.herokuapp.com/';
 let temperature = document.getElementById('temperature');
 let summary = document.getElementById('description');
 let name = document.getElementById('cityname');
-let icon;
+let icon,cityName;
 const city = () => {
-  let cityName = document.getElementById('city').value;
+   cityName = document.getElementById('city').value;
   let countryName = document.getElementById('country').value;
   update();
   fetch(geoApi+cityName+','+countryName+'&no_annotations=1').then((e) => e.json()).then((data) => {
     let {lat,lng} = data.results[0].geometry;
-    name.innerHTML = cityName.replace(/(^|\s)\S/g, (t) => t.toUpperCase());
     getWeather(lat,lng);
   });
 }
@@ -22,9 +21,9 @@ const getTemperature = () => {
       let lat = e.coords.latitude;
       let lng =  e.coords.longitude;
       fetch(geoApi+lat+','+lng+'&no_annotations=1').then((e) => e.json()).then((data) => {
-        cityName = data.results[0].components.city;
+       cityName = data.results[0].components.city;
+       getWeather(lat,lng);
       });
-      getWeather(lat,lng);
     });
   } else {
     temperature.innerHTML= "An Error has appeared, we can't access your position. Maybe consider allowing us the permition."
