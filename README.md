@@ -1,2 +1,2 @@
 # WeatherApp
-A basic weather app using Dark Sky API and GeoCage API. 
+A basic weather app using Dark Sky API and OpenCage Geocoding API. 
